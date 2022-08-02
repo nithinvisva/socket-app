@@ -8,7 +8,7 @@ import { io } from "socket.io-client";
 })
 export class ChatService {
 
-  public message$: BehaviorSubject<{i:number,j:number,userId:string| null, value:string, boxId:number}> = new BehaviorSubject({} as {i:number,j:number,userId:string| null, value:string, boxId:number});
+  public message$= new BehaviorSubject<{i:number,j:number,userId:string| null, value:string, boxId:number}>({} as {i:number,j:number,userId:string| null, value:string, boxId:number});
   constructor() {}
 
   socket = io('http://localhost:3000');
